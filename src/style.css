@@ -2,6 +2,10 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+
+
+--borderSize: 4px
+
   }
 
   * {
@@ -17,15 +21,23 @@ body {
     /* background-color: purple */
     width: 100vw;
     min-width: 40rem;
-    border: 3px solid red;
+    border: var(--borderSize) solid red;
     margin: 0px;
     padding: 0px;
   }
 
   .contactInfo {
-    border: 3px solid purple;
+    border: var(--borderSize) solid purple;
     background-color: azure;
+  }
 
+
+  .education {
+    border: var(--borderSize) solid orange;
+  }
+
+  .experience {
+    border: var(--borderSize) solid darkcyan;
   }
 
   .section {
