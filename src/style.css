@@ -2,10 +2,22 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+  }
 
+  * {
+    box-sizing: border-box;
   }
 
   h1 {
     font-size: 3.2em;
     line-height: 1.1;
+  }
+
+body {
+    /* background-color: purple */
+    width: 100vw;
+    min-width: 40rem;
+    border: 3px solid red;
+    margin: 0px;
+    padding: 0px;
   }
