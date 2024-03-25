@@ -24,4 +24,10 @@ body {
 
   .contactInfo {
     border: 3px solid purple;
+    background-color: azure;
+
+  }
+
+  .section {
+    /* color: red; */
   }
