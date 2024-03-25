@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const ContactInfo = () => {
   return (
-    <div className="contactInfo section">
+    <div className="contactInfo subSection">
       <h1 className="sectionHeader">General Information</h1>
 
       <div className="formEntry">

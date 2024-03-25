@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Experience = () => {
     return (
-        <div className="experience section">
+        <div className="experience subSection">
             <h2 className="sectionHeader">Experience</h2>
         </div>
     )

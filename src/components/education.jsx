@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Education = () => {
     return (
-        <div className="education section">
+        <div className="education subSection">
             <h2 className="sectionHeader">Education</h2>
         </div>
     )
