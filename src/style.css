@@ -15,7 +15,7 @@ body {
 }
 
 #root {
-  border: var(--borderSize) solid palegreen;
+  /* border: var(--borderSize) solid palegreen; */
   background-color: #F3F4F6;
   width: 100vw;
   height: auto;
@@ -49,19 +49,19 @@ body {
 }
 
 .contactInfo {
-  border: var(--borderSize) solid purple;
+  /* border: var(--borderSize) solid purple; */
 }
 
 .education {
-  border: var(--borderSize) solid orange;
+  /* border: var(--borderSize) solid orange; */
 }
 
 .experience {
-  border: var(--borderSize) solid darkcyan;
+  /* border: var(--borderSize) solid darkcyan; */
 }
 
 .resume {
-  border: var(--borderSize) solid hotpink;
+  /* border: var(--borderSize) solid hotpink; */
   grid-column-start: 2;
   grid-row: 1;
   grid-row-end: 4;
@@ -73,10 +73,11 @@ body {
 }
 
 .resumePage {
-  border: var(--borderSize) solid black;
+  /* border: var(--borderSize) solid black; */
   background-color: white;
   width: 850px;
   height: 1100px;
   display: flex;
   justify-content: center;
+  margin: 2rem 0px;
 }
