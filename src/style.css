@@ -49,6 +49,21 @@ body {
   min-width: 20rem;
 }
 
+.formEntry {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.formEntry input {
+  background-color: #F2F2F2;
+  box-shadow: none;
+  border: none;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
+
 .contactInfo {
   /* border: var(--borderSize) solid purple; */
 }
