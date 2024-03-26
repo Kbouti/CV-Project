@@ -1,45 +1,41 @@
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --borderSize: 4px;
+}
 
+* {
+  box-sizing: border-box;
+}
 
---borderSize: 4px
-
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-  }
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
 
 body {
-    /* background-color: purple */
-    width: 100vw;
-    min-width: 40rem;
-    border: var(--borderSize) solid red;
-    margin: 0px;
-    padding: 0px;
-  }
+  /* background-color: purple */
+  width: 100vw;
+  min-width: 40rem;
+  border: var(--borderSize) solid red;
+  margin: 0px;
+  padding: 0px;
+}
 
-  .contactInfo {
-    border: var(--borderSize) solid purple;
-    background-color: azure;
-  }
+.contactInfo {
+  border: var(--borderSize) solid purple;
+  background-color: azure;
+}
 
+.education {
+  border: var(--borderSize) solid orange;
+}
 
-  .education {
-    border: var(--borderSize) solid orange;
-  }
+.experience {
+  border: var(--borderSize) solid darkcyan;
+}
 
-  .experience {
-    border: var(--borderSize) solid darkcyan;
-  }
-
-  .section {
-    /* color: red; */
-  }
+.resume {
+  border: var(--borderSize) solid hotpink;
+}
