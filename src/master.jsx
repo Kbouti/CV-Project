@@ -15,6 +15,9 @@ const MasterPage = () => {
     <>
       <MainOutput 
               fullName={fullName}
+              phone = {phone}
+              email = {email}
+              city = {city}
 
       />
       <ContactInfo
