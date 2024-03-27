@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-const ContactInfo = () => {
+const ContactInfo = ({name}) => {
+{console.log(`name: ${name}`)}
   return (
     <div className="contactInfo subSection">
       <h1 className="sectionHeader">General Information</h1>
 
       <div className="formEntry">
         <label htmlFor="name">Full Name</label>
-        <input name="name" type="text"></input>
+        <input name="name" type="text" placeholder={name}></input>
       </div>
 
       <div className="formEntry">
