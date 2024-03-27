@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ContactInfo = ({fullName, email}) => {
+const ContactInfo = ({fullName, fullNameSetter, email, emailSetter, phone, phoneSetter, city, citySetter}) => {
   return (
     <div className="contactInfo subSection">
       <h1 className="sectionHeader">General Information</h1>
@@ -17,12 +17,12 @@ const ContactInfo = ({fullName, email}) => {
 
       <div className="formEntry">
         <label htmlFor="phone">Phone</label>
-        <input name="phone" type="phone"></input>
+        <input name="phone" type="phone" placeholder={phone}></input>
       </div>
 
       <div className="formEntry">
         <label htmlFor="city">City</label>
-        <input name="city" type="text"></input>
+        <input name="city" type="text" placeholder={city}></input>
       </div>
     </div>
   );
