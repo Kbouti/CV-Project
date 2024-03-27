@@ -1,19 +1,18 @@
 import { useState } from "react";
 
-const ContactInfo = ({name}) => {
-{console.log(`name: ${name}`)}
+const ContactInfo = ({fullName, email}) => {
   return (
     <div className="contactInfo subSection">
       <h1 className="sectionHeader">General Information</h1>
 
       <div className="formEntry">
         <label htmlFor="name">Full Name</label>
-        <input name="name" type="text" placeholder={name}></input>
+        <input name="name" type="text" placeholder={fullName}></input>
       </div>
 
       <div className="formEntry">
         <label htmlFor="email">Email</label>
-        <input name="email" type="email"></input>
+        <input name="email" type="email" placeholder={email}></input>
       </div>
 
       <div className="formEntry">

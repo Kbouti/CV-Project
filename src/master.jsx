@@ -10,14 +10,18 @@ const MasterPage = () => {
 // I suspect we declare any state variables here and pass them as props to our individual components
 
 const [fullName, setFullName] = useState("Derek Zoolander");
-
+const [email, setEmail] = useState("DZoo@Ballzmodels.com")
 
 
   return (
     <>
       <MainOutput />
       <ContactInfo 
-      name = {fullName}/>
+      fullName = {fullName}
+      nameSetter = {setFullName}
+      email = {email}
+      emailSetter = {setEmail}
+      />
       <Education />
       <Experience />
     </>
