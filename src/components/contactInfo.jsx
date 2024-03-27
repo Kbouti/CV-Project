@@ -32,22 +32,22 @@ function setValues(newValues){
 
       <div className="formEntry">
         <label htmlFor="name">Full Name</label>
-        <input id="nameInput" name="name" type="text" placeholder={fullName}></input>
+        <input id="nameInput" name="name" type="text" placeholder="Derek Zoolander"></input>
       </div>
 
       <div className="formEntry">
         <label htmlFor="email">Email</label>
-        <input id="emailInput" name="email" type="email" placeholder={email}></input>
+        <input id="emailInput" name="email" type="email" placeholder="DZoo@Ballzmodels.com"></input>
       </div>
 
       <div className="formEntry">
         <label htmlFor="phone">Phone</label>
-        <input id="phoneInput"name="phone" type="phone" placeholder={phone}></input>
+        <input id="phoneInput"name="phone" type="phone" placeholder="212-555-5378"></input>
       </div>
 
       <div className="formEntry">
         <label htmlFor="city">City</label>
-        <input id="cityInput" name="city" type="text" placeholder={city}></input>
+        <input id="cityInput" name="city" type="text" placeholder="New York"></input>
       </div>
 
  <button onClick={getValues}>Submit Changes</button>
