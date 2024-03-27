@@ -13,7 +13,10 @@ const MasterPage = () => {
 
   return (
     <>
-      <MainOutput />
+      <MainOutput 
+              fullName={fullName}
+
+      />
       <ContactInfo
         fullName={fullName}
         fullNameSetter={setFullName}
