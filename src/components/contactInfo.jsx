@@ -88,7 +88,7 @@ e.preventDefault()
           ></input>
         </div>
 
-        <button onClick={getValues}>Submit Changes</button>
+        <button type="submit" onClick={getValues}>Submit Changes</button>
       </form>
     </div>
   );

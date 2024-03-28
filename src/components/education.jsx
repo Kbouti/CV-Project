@@ -45,7 +45,7 @@ const Education = () => {
           ></input>
         </div>
 
-        <button onClick={console.log(`Submitted education form`)}>Submit Changes</button>
+        <button type="submit" onClick={console.log(`Submitted education form`)}>Submit Changes</button>
 
       </form>
     </div>
