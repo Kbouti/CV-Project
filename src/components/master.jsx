@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { ContactInfo } from "./components/contactInfo.jsx";
-import { Education } from "./components/education.jsx";
-import { Experience } from "./components/experience.jsx";
-import { MainOutput } from "./components/output.jsx";
+import { ContactInfo } from "./contactInfo.jsx";
+import { Education } from "./education.jsx";
+import { Experience } from "./experience.jsx";
+import { MainOutput } from "./output.jsx";
 
 const MasterPage = () => {
   const [fullName, setFullName] = useState("Derek Zoolander");
