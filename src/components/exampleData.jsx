@@ -3,7 +3,7 @@ import {v4 as uuidv4} from 'uuid';
 
 const examplePerson = {
     fullName: "Derek Zoolander",
-    email: "DZoo@Ballzmodels.com",
+    email: "DZoo@BallsModels.com",
     phone: "212-555-5378",
     city: "New York",
   }
@@ -27,10 +27,10 @@ const exampleEducation = {
 
 const exampleExperience = {
     key: uuidv4(),
-    company: "Ballz Models",
+    organization: "Balls Models",
     position: "Male Model",
-    years: "2000-2010",
     location: "New York",
+    years: "2000-2010",
     description: "Pure bred runway model, no singing, acting, or left turns. "
 }
 
