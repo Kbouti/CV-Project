@@ -1,9 +1,23 @@
 import { useState } from "react";
 import { exampleEducation } from "./exampleData";
 
+import { v4 as uuidv4 } from "uuid";
 
+const Education = ({ educationObjects, educationSetter }) => {
+  // OK we need a function to call when we submit this form. Form needs to:
+  //    - Prevent default
+  //    - Create a new object with the user input values
+  //    - Create a new array using existing educationObjects
+  //    - Add new oject to new array
+  //    - Call set function with new array
 
-const Education = ({educationObjects, educationSetter}) => {
+  function submitEducation(e) {
+    e.preventDefault();
+    console.log(`submitted education!`);
+    let newuuid = uuidv4();
+    console.log(`uuid: ${newuuid}`);
+  }
+
   return (
     <div className="education subSection">
       <h2 className="sectionHeader">Education</h2>
@@ -48,8 +62,9 @@ const Education = ({educationObjects, educationSetter}) => {
           ></input>
         </div>
 
-        <button type="submit" onClick={console.log(`Submitted education form`)}>Submit Changes</button>
-
+        <button type="submit" onClick={submitEducation}>
+          Submit Changes
+        </button>
       </form>
     </div>
   );
