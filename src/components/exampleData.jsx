@@ -18,7 +18,7 @@ const examplePerson = {
 
 const exampleEducation = {
     key: uuidv4(),
-    school: "Derek Zoolander's center for kids who don't read good",
+    school: "Derek Zoolander's center for kids who can't read good",
     degree: "Bachelor of Farts",
     location: "Uranus",
     years: "2004-2010"

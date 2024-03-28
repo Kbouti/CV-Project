@@ -14,8 +14,7 @@ const Education = ({ educationObjects, educationSetter }) => {
 
 
     e.preventDefault();
-    let newuuid = uuidv4();
-
+    
     const newSchool = document.getElementById("schoolInput").value;
     const newDegree = document.getElementById("degreeInput").value;
     const newLocation = document.getElementById("schoolLocationInput").value;
