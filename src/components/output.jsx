@@ -15,6 +15,9 @@ const MainOutput = ({ fullName, phone, email, city }) => {
         <section className="education">
           <h3>Education</h3>
         </section>
+        <section className="Experience">
+          <h3>Experience</h3>
+        </section>
       </div>
     </div>
   );
