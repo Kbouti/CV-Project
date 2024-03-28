@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { exampleEducation } from "./exampleData";
 
-const MainOutput = ({ fullName, phone, email, city }) => {
+const MainOutput = ({ fullName, phone, email, city, educationObjects }) => {
   return (
     <div className="resume mainSection">
       <div className="resumePage">
@@ -16,6 +16,11 @@ const MainOutput = ({ fullName, phone, email, city }) => {
         </header>
         <section className="education">
           <h3>Education</h3>
+          {educationObjects.map((object) =>{
+        return (
+          <h2>{object.school}</h2>
+        )
+      })}
         </section>
         <section className="Experience">
           <h3>Experience</h3>

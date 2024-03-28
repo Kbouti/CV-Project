@@ -8,6 +8,14 @@ const examplePerson = {
     city: "New York",
   }
 
+
+
+// ***************************************************************************
+//   We need a key from  uuid for each education and work object
+//  Next step figure out how to access/generate a uuid
+
+// ***************************************************************************
+
 const exampleEducation = {
     school: "Derek Zoolander's center for kids who don't read good",
     degree: "Bachelor of Farts",
