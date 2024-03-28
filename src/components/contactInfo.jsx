@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { examplePerson } from "./master";
+
 const ContactInfo = ({
   fullName,
   fullNameSetter,
@@ -54,7 +56,7 @@ e.preventDefault()
             id="nameInput"
             name="name"
             type="text"
-            placeholder="Derek Zoolander"
+            placeholder={examplePerson.fullName}
           ></input>
         </div>
 
@@ -64,7 +66,7 @@ e.preventDefault()
             id="emailInput"
             name="email"
             type="email"
-            placeholder="DZoo@Ballzmodels.com"
+            placeholder={examplePerson.email}
           ></input>
         </div>
 
@@ -74,7 +76,7 @@ e.preventDefault()
             id="phoneInput"
             name="phone"
             type="phone"
-            placeholder="212-555-5378"
+            placeholder={examplePerson.phone}
           ></input>
         </div>
 
@@ -84,7 +86,7 @@ e.preventDefault()
             id="cityInput"
             name="city"
             type="text"
-            placeholder="New York"
+            placeholder={examplePerson.city}
           ></input>
         </div>
 
