@@ -17,7 +17,9 @@ const ContactInfo = ({
     //  setValues(values)
   }
 
-  function getValues() {
+  function getValues(e) {
+e.preventDefault()
+
     const newName = document.getElementById("nameInput").value;
     const newPhone = document.getElementById("phoneInput").value;
     const newEmail = document.getElementById("emailInput").value;
