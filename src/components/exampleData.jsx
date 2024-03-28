@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import {v4 as uuidv4} from 'uuid';
 
 const examplePerson = {
     fullName: "Derek Zoolander",
@@ -17,10 +17,22 @@ const examplePerson = {
 // ***************************************************************************
 
 const exampleEducation = {
+    key: uuidv4(),
     school: "Derek Zoolander's center for kids who don't read good",
     degree: "Bachelor of Farts",
     location: "Uranus",
     years: "2004-2010"
 }
 
-  export {examplePerson, exampleEducation}
+
+const exampleExperience = {
+    key: uuidv4(),
+    company: "Ballz Models",
+    position: "Male Model",
+    years: "2000-2010",
+    location: "New York",
+    description: "Pure bred runway model, no singing, acting, or left turns. "
+}
+
+
+  export {examplePerson, exampleEducation, exampleExperience}

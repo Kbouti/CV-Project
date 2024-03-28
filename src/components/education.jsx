@@ -3,7 +3,7 @@ import { exampleEducation } from "./exampleData";
 
 
 
-const Education = () => {
+const Education = ({educationObjects, educationSetter}) => {
   return (
     <div className="education subSection">
       <h2 className="sectionHeader">Education</h2>

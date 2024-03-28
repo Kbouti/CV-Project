@@ -4,16 +4,17 @@ import { ContactInfo } from "./contactInfo.jsx";
 import { Education } from "./education.jsx";
 import { Experience } from "./experience.jsx";
 import { MainOutput } from "./output.jsx";
-import { examplePerson } from "./exampleData.jsx";
-import { exampleEducation } from "./exampleData.jsx";
-
+import {
+  examplePerson,
+  exampleEducation,
+  exampleExperience,
+} from "./exampleData.jsx";
 
 // Example person is one object with several state variables. We're fine with this for now as it opens up the possibility to update state when a single element is changed
 // EducationObjects is our state variable for an array containing as many education entries as the user wants to make
 
-
-
-const education = [exampleEducation]
+const education = [exampleEducation];
+const experience = [exampleExperience];
 
 const MasterPage = () => {
   const [fullName, setFullName] = useState(examplePerson.fullName);
@@ -21,16 +22,16 @@ const MasterPage = () => {
   const [phone, setPhone] = useState(examplePerson.phone);
   const [city, setCity] = useState(examplePerson.city);
   const [educationObjects, setEducationObjects] = useState(education);
+  const [experienceObjects, setExperienceObjects] = useState(experience);
 
   return (
     <>
-      <MainOutput 
-              fullName={fullName}
-              phone = {phone}
-              email = {email}
-              city = {city}
-              educationObjects = {educationObjects}
-
+      <MainOutput
+        fullName={fullName}
+        phone={phone}
+        email={email}
+        city={city}
+        educationObjects={educationObjects}
       />
       <ContactInfo
         fullName={fullName}
@@ -42,10 +43,16 @@ const MasterPage = () => {
         city={city}
         citySetter={setCity}
       />
-      <Education />
-      <Experience />
+      <Education
+        educationObjects={educationObjects}
+        educationSetter={setEducationObjects}
+      />
+      <Experience
+        experienceObjects={experienceObjects}
+        experienceSetter={setExperienceObjects}
+      />
     </>
   );
 };
 
-export { examplePerson, MasterPage };
+export { MasterPage };

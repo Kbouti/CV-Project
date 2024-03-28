@@ -18,7 +18,10 @@ const MainOutput = ({ fullName, phone, email, city, educationObjects }) => {
           <h3>Education</h3>
           {educationObjects.map((object) =>{
         return (
+          <>
           <h2>{object.school}</h2>
+          <p>{object.key}</p>
+          </>
         )
       })}
         </section>
