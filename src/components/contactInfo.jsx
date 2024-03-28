@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { examplePerson } from "./master";
+import { examplePerson } from "./exampleData";
 
 const ContactInfo = ({
   fullName,

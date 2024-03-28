@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { exampleEducation } from "./exampleData";
+
 const MainOutput = ({ fullName, phone, email, city }) => {
   return (
     <div className="resume mainSection">

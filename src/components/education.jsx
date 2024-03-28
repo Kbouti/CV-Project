@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { exampleEducation } from "./exampleData";
+
+
 
 const Education = () => {
   return (
@@ -12,7 +15,7 @@ const Education = () => {
             id="schoolInput"
             name="school"
             type="text"
-            placeholder="Derek Zoolander's center for kids who don't read good"
+            placeholder={exampleEducation.school}
           ></input>
         </div>
         <div className="formEntry">
@@ -21,7 +24,7 @@ const Education = () => {
             id="degreeInput"
             name="degree"
             type="text"
-            placeholder="Bachelor of Farts"
+            placeholder={exampleEducation.degree}
           ></input>
         </div>
 
@@ -31,7 +34,7 @@ const Education = () => {
             id="locationInput"
             name="location"
             type="text"
-            placeholder="Uranus"
+            placeholder={exampleEducation.location}
           ></input>
         </div>
 
@@ -41,7 +44,7 @@ const Education = () => {
             id="degreeInput"
             name="degree"
             type="text"
-            placeholder="2004-2010"
+            placeholder={exampleEducation.years}
           ></input>
         </div>
 

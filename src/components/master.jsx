@@ -4,20 +4,8 @@ import { ContactInfo } from "./contactInfo.jsx";
 import { Education } from "./education.jsx";
 import { Experience } from "./experience.jsx";
 import { MainOutput } from "./output.jsx";
+import { examplePerson } from "./exampleData.jsx";
 
-
-
-
-// Ok I'm thinking we establish the placeholder name and info in an object that gets declared here. 
-// We want to establish objects because when we get to work and education there are going to be multiple objects, not just a set of values
-
-
-const examplePerson = {
-  fullName: "Derek Zoolander",
-  email: "DZoo@Ballzmodels.com",
-  phone: "212-555-5378",
-  city: "New York",
-}
 
 
 
