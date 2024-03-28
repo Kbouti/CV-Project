@@ -40,6 +40,7 @@ body {
 }
 
 
+
 header {
   display: flex;
   flex-direction: column;
@@ -84,10 +85,32 @@ header li {
   min-width: 20rem;
 }
 
+.subSection form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  align-self: center;
+  justify-self:center;
+  padding: 2rem;
+  font-size:1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--accentColor);
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
 .formEntry {
   display: flex;
   flex-direction: column;
-  width: 80%;
+margin: 1rem;
 }
 
 .formEntry input {
