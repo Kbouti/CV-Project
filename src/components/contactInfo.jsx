@@ -12,6 +12,7 @@ const ContactInfo = ({
   city,
   citySetter,
 }) => {
+  
   function submitChanges() {
     // Ultimately this should be the onClick callback. This function will get the values of the inputs.
     // We'll have the option of replacing placeholder text with new text or leaving placeholder text if there is nouser input value
@@ -46,7 +47,7 @@ e.preventDefault()
   }
 
   return (
-    <div className="contactInfo subSection">
+    <div id="contactInfo" className="contactInfo subSection">
       <h1 className="sectionHeader">General Information</h1>
 
       <form>

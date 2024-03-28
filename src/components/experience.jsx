@@ -1,24 +1,18 @@
 import { useState } from "react";
 import { exampleExperience } from "./exampleData";
 
-
-
-const Experience = ({experienceObjects, experienceSetter}) => {
-
-
-function submitExperience(e) {
+const Experience = ({ experienceObjects, experienceSetter }) => {
+  function submitExperience(e) {
     e.preventDefault();
 
     alert(`You submitted work experience! `);
-}
+  }
 
-
-    return (
-        <div className="experience subSection">
-            <h2 className="sectionHeader">Experience</h2>
-            <div className="experienceThumbnails"></div>
-        <form>
-
+  return (
+    <div id="experience" className="experience subSection">
+      <h2 className="sectionHeader">Experience</h2>
+      <div className="experienceThumbnails"></div>
+      <form>
         <div className="formEntry">
           <label htmlFor="organization">Organization</label>
           <input
@@ -42,7 +36,7 @@ function submitExperience(e) {
         <div className="formEntry">
           <label htmlFor="location">Location</label>
           <input
-            id="locationInput"
+            id="workLocationInput"
             name="location"
             type="text"
             placeholder={exampleExperience.location}
@@ -52,7 +46,7 @@ function submitExperience(e) {
         <div className="formEntry">
           <label htmlFor="years">Years</label>
           <input
-            id="yearssInput"
+            id="workYearsInput"
             name="years"
             type="text"
             placeholder={exampleExperience.years}
@@ -69,15 +63,12 @@ function submitExperience(e) {
           ></input>
         </div>
 
-
         <button type="submit" onClick={submitExperience}>
           Submit Changes
         </button>
+      </form>
+    </div>
+  );
+};
 
-
-        </form>
-        </div>
-    )
-}
-
-export {Experience}
+export { Experience };
