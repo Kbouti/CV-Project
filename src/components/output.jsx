@@ -3,6 +3,9 @@ import { useState } from "react";
 import { exampleEducation } from "./exampleData";
 
 const MainOutput = ({ fullName, phone, email, city, educationObjects }) => {
+
+
+
   return (
     <div className="resume mainSection">
       <div className="resumePage">

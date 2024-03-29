@@ -10,8 +10,6 @@ import {
   exampleExperience,
 } from "./exampleData.jsx";
 
-// Example person is one object with several state variables. We're fine with this for now as it opens up the possibility to update state when a single element is changed
-// EducationObjects is our state variable for an array containing as many education entries as the user wants to make
 
 const education = [exampleEducation];
 const experience = [exampleExperience];
@@ -23,6 +21,12 @@ const MasterPage = () => {
   const [city, setCity] = useState(examplePerson.city);
   const [educationObjects, setEducationObjects] = useState(education);
   const [experienceObjects, setExperienceObjects] = useState(experience);
+
+  // ******************************************************************************************
+  const [displayExample, setDisplayExample] = useState(true);
+  // Need something like the above state variable to establish whether or not to include example information on resume output
+  //  The question now is how and where do we use it
+// ******************************************************************************************
 
   return (
     <>
@@ -42,6 +46,9 @@ const MasterPage = () => {
         phoneSetter={setPhone}
         city={city}
         citySetter={setCity}
+        displayExample={displayExample}
+        displayExampleSetter= {setDisplayExample}
+
       />
       <Education
         educationObjects={educationObjects}

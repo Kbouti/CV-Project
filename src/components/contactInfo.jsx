@@ -11,17 +11,19 @@ const ContactInfo = ({
   phoneSetter,
   city,
   citySetter,
-}) => {
-  
-  function submitChanges() {
-    // Ultimately this should be the onClick callback. This function will get the values of the inputs.
-    // We'll have the option of replacing placeholder text with new text or leaving placeholder text if there is nouser input value
-    //  getValues()
-    //  setValues(values)
-  }
 
-  function getValues(e) {
-e.preventDefault()
+//  ******************************************************************************************
+  displayExample,
+  displayExampleSetter,
+
+// I added displayExample and displayExampleSetter as props because we need to manipulate this on formSubmit. 
+// If displayExample is true, we first change it to false, then remove the example objects from our data arrays, THEN add our new entry, THEN render again. 
+// if displayExample is false then we just add our new entry and rerender
+//  ******************************************************************************************
+
+}) => {
+  function submitForm(e) {
+    e.preventDefault();
 
     const newName = document.getElementById("nameInput").value;
     const newPhone = document.getElementById("phoneInput").value;
@@ -40,10 +42,6 @@ e.preventDefault()
     {
       citySetter(newCity);
     }
-  }
-
-  function setValues(newValues) {
-    // we'll update values, but leave the placeholder if the rest is blank? Maybe?
   }
 
   return (
@@ -91,7 +89,9 @@ e.preventDefault()
           ></input>
         </div>
 
-        <button type="submit" onClick={getValues}>Submit Changes</button>
+        <button type="submit" onClick={submitForm}>
+          Submit Changes
+        </button>
       </form>
     </div>
   );
