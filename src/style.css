@@ -173,3 +173,22 @@ margin: 1rem;
   background-color: #F2F2F2;
   margin: 1rem 3rem;
 }
+
+.educationEntry {
+  display:grid;
+  grid-template-areas: 
+  "a b"
+  "c d";
+}
+
+.educationEntry * {
+  margin: 1rem 3rem;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+.lowerEntry {
+  margin-top: 0px;
+}

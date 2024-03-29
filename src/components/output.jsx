@@ -16,14 +16,16 @@ const MainOutput = ({ fullName, phone, email, city, educationObjects }) => {
         </header>
         <section className="education">
           <h3>Education</h3>
-          {educationObjects.map((object) =>{
-        return (
-          <>
-          <h2>{object.school}</h2>
-          <p>{object.key}</p>
-          </>
-        )
-      })}
+          {educationObjects.map((object) => {
+            return (
+              <div key={object.key} className="educationEntry">
+                <h2>{object.school}</h2>
+                <p className="rightAlign">{object.location}</p>
+                <p className="lowerEntry">{object.degree}</p>
+                <p className="rightAlign lowerEntry">{object.years}</p>
+              </div>
+            );
+          })}
         </section>
         <section className="Experience">
           <h3>Experience</h3>
