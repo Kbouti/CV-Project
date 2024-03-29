@@ -3,13 +3,14 @@ import { exampleEducation } from "./exampleData";
 
 import { v4 as uuidv4 } from "uuid";
 
-const Education = ({ educationObjects, educationSetter }) => {
+const Education = ({ educationObjects, educationSetter, displayExample }) => {
 
   function submitEducation(e) {
-
+    console.log(`Education form submitted`)
+    console.log(`displayExample: ${displayExample}`);
 //  ************************************************************************************************
-//  Ok, this function is working to add an education entry, but it's not removing the example one we set at the beginning. 
-// We'll have to establish a new variable in state to determine if/when example data should be removed
+//  Ok, now we've got access to the displayExample prop. 
+//  On formsubmit we need to check if displayExample is true and if true, remove example data and set to false
 //  ************************************************************************************************
 
 

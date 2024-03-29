@@ -23,6 +23,11 @@ const ContactInfo = ({
 
 }) => {
   function submitForm(e) {
+
+console.log(`ContactInfo form submitted`)
+console.log(`displayExample: ${displayExample}`);
+
+
     e.preventDefault();
 
     const newName = document.getElementById("nameInput").value;

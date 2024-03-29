@@ -48,15 +48,19 @@ const MasterPage = () => {
         citySetter={setCity}
         displayExample={displayExample}
         displayExampleSetter= {setDisplayExample}
-
       />
       <Education
         educationObjects={educationObjects}
         educationSetter={setEducationObjects}
+        displayExample={displayExample}
+        displayExampleSetter= {setDisplayExample}
       />
       <Experience
         experienceObjects={experienceObjects}
         experienceSetter={setExperienceObjects}
+        displayExample={displayExample}
+        displayExampleSetter= {setDisplayExample}
+
       />
     </>
   );
