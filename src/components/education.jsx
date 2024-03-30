@@ -3,23 +3,53 @@ import { exampleEducation } from "./exampleData";
 
 import { v4 as uuidv4 } from "uuid";
 
-const Education = ({ educationObjects, educationSetter, displayExample }) => {
-
+const Education = ({
+  fullNameSetter,
+  emailSetter,
+  phoneSetter,
+  citySetter,
+  educationObjects,
+  educationSetter,
+  displayExample,
+  displayExampleSetter,
+}) => {
   function submitEducation(e) {
-    console.log(`Education form submitted`)
-    console.log(`displayExample: ${displayExample}`);
-//  ************************************************************************************************
-//  Ok, now we've got access to the displayExample prop. 
-//  On formsubmit we need to check if displayExample is true and if true, remove example data and set to false
-//  ************************************************************************************************
-
-
     e.preventDefault();
-    
+    console.log(`Education form submitted`);
+    console.log(`displayExample: ${displayExample}`);
+    //  ************************************************************************************************
+    // Success!! We reset all the example data when education is submitted for the first time. 
+    // Apply to other sections and test for bugs
+    //  ************************************************************************************************
+
     const newSchool = document.getElementById("schoolInput").value;
     const newDegree = document.getElementById("degreeInput").value;
     const newLocation = document.getElementById("schoolLocationInput").value;
     const newYears = document.getElementById("schoolYearsInput").value;
+
+    if (displayExample === true) {
+      console.log(
+        `Captured TRUE displayExample. Setting to false and removing example data`
+      );
+      displayExampleSetter(false);
+      fullNameSetter("");
+      emailSetter("");
+      phoneSetter("");
+      citySetter("");
+
+      const newObjsArray = [];
+      const newEntry = {
+        key: uuidv4(),
+        school: newSchool,
+        degree: newDegree,
+        location: newLocation,
+        years: newYears,
+      };
+
+      newObjsArray.push(newEntry);
+      educationSetter(newObjsArray);
+      return;
+    }
 
     const newEntry = {
       key: uuidv4(),

@@ -10,7 +10,6 @@ import {
   exampleExperience,
 } from "./exampleData.jsx";
 
-
 const education = [exampleEducation];
 const experience = [exampleExperience];
 
@@ -26,7 +25,7 @@ const MasterPage = () => {
   const [displayExample, setDisplayExample] = useState(true);
   // Need something like the above state variable to establish whether or not to include example information on resume output
   //  The question now is how and where do we use it
-// ******************************************************************************************
+  // ******************************************************************************************
 
   return (
     <>
@@ -46,21 +45,32 @@ const MasterPage = () => {
         phoneSetter={setPhone}
         city={city}
         citySetter={setCity}
+        educationSetter={setEducationObjects}
+        experienceSetter={setExperienceObjects}
         displayExample={displayExample}
-        displayExampleSetter= {setDisplayExample}
+        displayExampleSetter={setDisplayExample}
       />
       <Education
+        fullNameSetter={setFullName}
+        emailSetter={setEmail}
+        phoneSetter={setPhone}
+        citySetter={setCity}
         educationObjects={educationObjects}
         educationSetter={setEducationObjects}
+        experienceSetter={setExperienceObjects}
         displayExample={displayExample}
-        displayExampleSetter= {setDisplayExample}
+        displayExampleSetter={setDisplayExample}
       />
       <Experience
+        fullNameSetter={setFullName}
+        emailSetter={setEmail}
+        phoneSetter={setPhone}
+        citySetter={setCity}
+        educationSetter={setEducationObjects}
         experienceObjects={experienceObjects}
         experienceSetter={setExperienceObjects}
         displayExample={displayExample}
-        displayExampleSetter= {setDisplayExample}
-
+        displayExampleSetter={setDisplayExample}
       />
     </>
   );
