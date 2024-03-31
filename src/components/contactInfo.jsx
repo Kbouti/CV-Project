@@ -43,7 +43,7 @@ const ContactInfo = ({
       displayExampleSetter(false);
       const blankArray = [];
       educationSetter(blankArray);
-      // experienceSetter(blankArray);
+      experienceSetter(blankArray);
     }
 
     fullNameSetter(newName);
