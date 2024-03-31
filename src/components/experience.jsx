@@ -116,8 +116,9 @@ const Experience = ({
         </button>
       </form>
 
-      <button className="expandButton">Expand</button>
-
+      <button className="expandButton">
+        <span className="material-symbols-outlined">expand_less</span>
+      </button>
     </div>
   );
 };

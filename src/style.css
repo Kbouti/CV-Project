@@ -74,6 +74,10 @@ header li {
   right:1rem;
 }
 
+.expandButton:hover {
+  cursor:pointer;
+}
+
 .subSection h1 {
   justify-content: center;
   text-align: center;
