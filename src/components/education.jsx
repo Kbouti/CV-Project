@@ -10,6 +10,7 @@ const Education = ({
   citySetter,
   educationObjects,
   educationSetter,
+  experienceSetter,
   displayExample,
   displayExampleSetter,
 }) => {
@@ -17,10 +18,6 @@ const Education = ({
     e.preventDefault();
     console.log(`Education form submitted`);
     console.log(`displayExample: ${displayExample}`);
-    //  ************************************************************************************************
-    // Success!! We reset all the example data when education is submitted for the first time. 
-    // Apply to other sections and test for bugs
-    //  ************************************************************************************************
 
     const newSchool = document.getElementById("schoolInput").value;
     const newDegree = document.getElementById("degreeInput").value;

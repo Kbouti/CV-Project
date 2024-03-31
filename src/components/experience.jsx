@@ -1,11 +1,25 @@
 import { useState } from "react";
 import { exampleExperience } from "./exampleData";
 
-const Experience = ({ experienceObjects, experienceSetter }) => {
+const Experience = ({ 
+  fullNameSetter,
+  emailSetter,
+  phoneSetter,
+  citySetter,
+  educationSetter,
+  experienceObjects,
+  experienceSetter,
+  displayExample,
+  displayExampleSetter,
+}) => {
   function submitExperience(e) {
     e.preventDefault();
-
-    alert(`You submitted work experience! `);
+    console.log(`Experience form submitted`);
+    console.log(`displayExample: ${displayExample}`);
+    
+  const newOrganization = document.getElementById("organizationInput").value;
+  
+  
   }
 
   return (
