@@ -18,10 +18,20 @@ const Education = ({
     console.log(`Education form submitted`);
     console.log(`displayExample: ${displayExample}`);
 
-    const newSchool = document.getElementById("schoolInput").value;
-    const newDegree = document.getElementById("degreeInput").value;
-    const newLocation = document.getElementById("schoolLocationInput").value;
-    const newYears = document.getElementById("schoolYearsInput").value;
+    const schoolInput = document.getElementById("schoolInput");
+    const degreeInput = document.getElementById("degreeInput");
+    const locationInput = document.getElementById("schoolLocationInput");
+    const yearsInput = document.getElementById("schoolYearsInput");
+
+    const newSchool = schoolInput.value;
+    const newDegree = degreeInput.value;
+    const newLocation = locationInput.value;
+    const newYears = yearsInput.value;
+
+    schoolInput.value = "";
+    degreeInput.value = "";
+    locationInput.value = "";
+    yearsInput.value = "";
 
     if (displayExample === true) {
       console.log(
