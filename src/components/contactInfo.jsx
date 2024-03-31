@@ -11,6 +11,9 @@ const ContactInfo = ({
   phoneSetter,
   city,
   citySetter,
+  educationSetter,
+  experienceSetter,
+
 
 //  ******************************************************************************************
   displayExample,
@@ -34,6 +37,18 @@ console.log(`displayExample: ${displayExample}`);
     const newPhone = document.getElementById("phoneInput").value;
     const newEmail = document.getElementById("emailInput").value;
     const newCity = document.getElementById("cityInput").value;
+
+
+
+    if (displayExample === true){
+      console.log( `Captured TRUE displayExample. Setting to false and removing example data`)
+      displayExampleSetter(false);
+const blankArray = [];
+
+educationSetter(blankArray);
+// experienceSetter(blankArray);
+    }
+
 
     {
       fullNameSetter(newName);
