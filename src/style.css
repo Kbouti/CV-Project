@@ -59,12 +59,19 @@ header li {
 
 .subSection {
   background-color: white;
+  position:relative;
   border-radius: 10px;
   margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.expandButton {
+  position: absolute;
+  bottom:1rem;
+  right:1rem;
 }
 
 .subSection h1 {
@@ -79,17 +86,24 @@ header li {
   flex-direction: column;
 }
 
-form .submitButton {
+
+
+
+button {
   align-self: center;
   justify-self: center;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: var(--accentColor);
+
+}
+
+form .submitButton {
   padding: 1.2rem;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  background-color: var(--accentColor);
 }
 
 form button:hover {

@@ -101,6 +101,10 @@ const ContactInfo = ({
           Submit Changes
         </button>
       </form>
+
+
+    <button className="expandButton">Expand</button>
+
     </div>
   );
 };
