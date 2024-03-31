@@ -174,14 +174,14 @@ margin: 1rem;
   margin: 1rem 3rem;
 }
 
-.educationEntry {
+.userEntry {
   display:grid;
   grid-template-areas: 
   "a b"
   "c d";
 }
 
-.educationEntry * {
+.userEntry * {
   margin: 1rem 3rem;
 }
 
@@ -192,3 +192,4 @@ margin: 1rem;
 .lowerEntry {
   margin-top: 0px;
 }
+

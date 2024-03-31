@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { exampleEducation } from "./exampleData";
 
-const MainOutput = ({ fullName, phone, email, city, educationObjects }) => {
+const MainOutput = ({ fullName, phone, email, city, educationObjects, experienceObjects }) => {
 
 
 
@@ -21,8 +21,8 @@ const MainOutput = ({ fullName, phone, email, city, educationObjects }) => {
           <h3>Education</h3>
           {educationObjects.map((object) => {
             return (
-              <div key={object.key} className="educationEntry">
-                <h2>{object.school}</h2>
+              <div key={object.key} className="educationEntry userEntry">
+                <h4>{object.school}</h4>
                 <p className="rightAlign">{object.location}</p>
                 <p className="lowerEntry">{object.degree}</p>
                 <p className="rightAlign lowerEntry">{object.years}</p>
@@ -32,6 +32,19 @@ const MainOutput = ({ fullName, phone, email, city, educationObjects }) => {
         </section>
         <section className="Experience">
           <h3>Experience</h3>
+          {experienceObjects.map((object) => {
+            return (
+              <div key = {object.key} className ="experienceEntry userEntry">
+                <div>
+                <h4>{object.organization}</h4>
+                <p>{object.position}</p>
+                </div>
+                <p>{object.location}</p>
+                <p>{object.years}</p>
+                <p>{object.description}</p>
+              </div>
+            )
+          })}
         </section>
       </div>
     </div>

@@ -35,6 +35,7 @@ const MasterPage = () => {
         email={email}
         city={city}
         educationObjects={educationObjects}
+        experienceObjects={experienceObjects}
       />
       <ContactInfo
         fullName={fullName}
