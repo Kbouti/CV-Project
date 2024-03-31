@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { exampleEducation } from "./exampleData";
-
 import { v4 as uuidv4 } from "uuid";
 
 const Education = ({
@@ -34,6 +33,7 @@ const Education = ({
       phoneSetter("");
       citySetter("");
 
+      const blankArray = [];
       const newObjsArray = [];
       const newEntry = {
         key: uuidv4(),
@@ -44,6 +44,7 @@ const Education = ({
       };
 
       newObjsArray.push(newEntry);
+      experienceSetter(blankArray);
       educationSetter(newObjsArray);
       return;
     }

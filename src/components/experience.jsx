@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { exampleExperience } from "./exampleData";
+import { v4 as uuidv4 } from "uuid";
 
-const Experience = ({ 
+const Experience = ({
   fullNameSetter,
   emailSetter,
   phoneSetter,
@@ -16,10 +17,39 @@ const Experience = ({
     e.preventDefault();
     console.log(`Experience form submitted`);
     console.log(`displayExample: ${displayExample}`);
-    
-  const newOrganization = document.getElementById("organizationInput").value;
-  
-  
+
+    const newOrganization = document.getElementById("organizationInput").value;
+    const newPosition = document.getElementById("positionInput").value;
+    const newLocation = document.getElementById("workLocationInput").value;
+    const newYears = document.getElementById("workYearsInput").value;
+    const newDesctiption = document.getElementById("descriptionInput").value;
+
+    if (displayExample === true) {
+      console.log(
+        `Captured TRUE displayExample. Setting to false and removing example data`
+      );
+      displayExampleSetter(false);
+      fullNameSetter("");
+      emailSetter("");
+      phoneSetter("");
+      citySetter("");
+
+      const blankArray = [];
+      const newArray = [];
+      const newEntry = {
+        key: uuidv4(),
+        organization: newOrganization,
+        position: newPosition,
+        location: newLocation,
+        years: newYears,
+        description: newDesctiption,
+      };
+
+      newArray.push(newEntry);
+      educationSetter(blankArray);
+      experienceSetter(newArray);
+      return;
+    }
   }
 
   return (
