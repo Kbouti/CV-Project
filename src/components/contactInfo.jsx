@@ -13,55 +13,33 @@ const ContactInfo = ({
   citySetter,
   educationSetter,
   experienceSetter,
-
-
-//  ******************************************************************************************
   displayExample,
   displayExampleSetter,
-
-// I added displayExample and displayExampleSetter as props because we need to manipulate this on formSubmit. 
-// If displayExample is true, we first change it to false, then remove the example objects from our data arrays, THEN add our new entry, THEN render again. 
-// if displayExample is false then we just add our new entry and rerender
-//  ******************************************************************************************
-
 }) => {
   function submitForm(e) {
     e.preventDefault();
-console.log(`ContactInfo form submitted`)
-console.log(`displayExample: ${displayExample}`);
-
-
-
+    console.log(`ContactInfo form submitted`);
+    console.log(`displayExample: ${displayExample}`);
 
     const newName = document.getElementById("nameInput").value;
     const newPhone = document.getElementById("phoneInput").value;
     const newEmail = document.getElementById("emailInput").value;
     const newCity = document.getElementById("cityInput").value;
 
-
-
-    if (displayExample === true){
-      console.log( `Captured TRUE displayExample. Setting to false and removing example data`)
+    if (displayExample === true) {
+      console.log(
+        `Captured TRUE displayExample. Setting to false and removing example data`
+      );
       displayExampleSetter(false);
-const blankArray = [];
-
-educationSetter(blankArray);
-// experienceSetter(blankArray);
+      const blankArray = [];
+      educationSetter(blankArray);
+      // experienceSetter(blankArray);
     }
 
-
-    {
-      fullNameSetter(newName);
-    }
-    {
-      phoneSetter(newPhone);
-    }
-    {
-      emailSetter(newEmail);
-    }
-    {
-      citySetter(newCity);
-    }
+    fullNameSetter(newName);
+    phoneSetter(newPhone);
+    emailSetter(newEmail);
+    citySetter(newCity);
   }
 
   return (
