@@ -2,10 +2,14 @@ import { useState } from "react";
 
 import { exampleEducation } from "./exampleData";
 
-const MainOutput = ({ fullName, phone, email, city, educationObjects, experienceObjects }) => {
-
-
-
+const MainOutput = ({
+  fullName,
+  phone,
+  email,
+  city,
+  educationObjects,
+  experienceObjects,
+}) => {
   return (
     <div className="resume mainSection">
       <div className="resumePage">
@@ -22,10 +26,10 @@ const MainOutput = ({ fullName, phone, email, city, educationObjects, experience
           {educationObjects.map((object) => {
             return (
               <div key={object.key} className="educationEntry userEntry">
+                <p>{object.years}</p>
                 <h4>{object.school}</h4>
-                <p className="rightAlign">{object.location}</p>
-                <p className="lowerEntry">{object.degree}</p>
-                <p className="rightAlign lowerEntry">{object.years}</p>
+                <p>{object.location}</p>
+                <p>{object.degree}</p>
               </div>
             );
           })}
@@ -34,16 +38,15 @@ const MainOutput = ({ fullName, phone, email, city, educationObjects, experience
           <h3>Experience</h3>
           {experienceObjects.map((object) => {
             return (
-              <div key = {object.key} className ="experienceEntry userEntry">
-                <div>
-                <h4>{object.organization}</h4>
-                <p>{object.position}</p>
-                </div>
-                <p>{object.location}</p>
+              <div key={object.key} className="experienceEntry userEntry">
                 <p>{object.years}</p>
-                <p>{object.description}</p>
+                <h4>{object.organization}</h4>
+                <p>{object.location}</p> 
+                <p>{object.position}</p>
+                <p className="jobDescription">{object.description}</p>
+
               </div>
-            )
+            );
           })}
         </section>
       </div>

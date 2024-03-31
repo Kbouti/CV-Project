@@ -176,20 +176,14 @@ margin: 1rem;
 
 .userEntry {
   display:grid;
-  grid-template-areas: 
-  "a b"
-  "c d";
+grid-template-columns: 1fr 2fr;
+margin: 0 3rem;
 }
 
 .userEntry * {
-  margin: 1rem 3rem;
+  margin:0;
 }
 
-.rightAlign {
-  text-align: right;
+.jobDescription {
+  grid-column-start: 2;
 }
-
-.lowerEntry {
-  margin-top: 0px;
-}
-
