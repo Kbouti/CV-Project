@@ -21,10 +21,20 @@ const ContactInfo = ({
     console.log(`ContactInfo form submitted`);
     console.log(`displayExample: ${displayExample}`);
 
-    const newName = document.getElementById("nameInput").value;
-    const newPhone = document.getElementById("phoneInput").value;
-    const newEmail = document.getElementById("emailInput").value;
-    const newCity = document.getElementById("cityInput").value;
+    const nameInput = document.getElementById("nameInput");
+    const phoneInput = document.getElementById("phoneInput");
+    const emailInput = document.getElementById("emailInput");
+    const cityInput = document.getElementById("cityInput");
+
+    const newName = nameInput.value;
+    const newPhone = phoneInput.value;
+    const newEmail = emailInput.value;
+    const newCity = cityInput.value;
+
+    nameInput.value = "";
+    phoneInput.value = "";
+    emailInput.value = "";
+    cityInput.value = "";
 
     if (displayExample === true) {
       console.log(
