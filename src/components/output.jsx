@@ -35,7 +35,7 @@ const MainOutput = ({
           })}
         </section>
         <section className="Experience">
-          <h3>Experience</h3>
+          <h3>Professional Experience</h3>
           {experienceObjects.map((object) => {
             return (
               <div key={object.key} className="experienceEntry userEntry">

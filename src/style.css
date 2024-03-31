@@ -3,12 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   --borderSize: 4px;
-
-
---accentColor: #0E374E;
-
-
-
+  --accentColor: #0e374e;
 }
 
 * {
@@ -17,12 +12,12 @@
 
 body {
   margin: 0px;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
 }
 
 #root {
   /* border: var(--borderSize) solid palegreen; */
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   width: 100vw;
   height: auto;
   min-width: 40rem;
@@ -30,16 +25,9 @@ body {
   grid-template-columns: 1fr 2fr;
 }
 
-/* h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-} */
-
 body {
   margin: 0px;
 }
-
-
 
 header {
   display: flex;
@@ -48,19 +36,19 @@ header {
   height: 15%;
   justify-content: space-between;
   background-color: var(--accentColor);
-  color:white;
+  color: white;
 }
 
 header h2 {
   text-align: center;
-  font-weight:700;
+  font-weight: 700;
   font-size: 36px;
 }
 
 header ul {
   padding: 0rem;
-display:grid;
-grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 header li {
   list-style: none;
@@ -69,21 +57,19 @@ header li {
   width: auto;
 }
 
-
 .subSection {
   background-color: white;
   border-radius: 10px;
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
 }
 
 .subSection h1 {
   justify-content: center;
-  text-align:center;
+  text-align: center;
   min-width: 20rem;
 }
 
@@ -93,12 +79,12 @@ header li {
   flex-direction: column;
 }
 
-form button {
+form .submitButton {
   align-self: center;
-  justify-self:center;
+  justify-self: center;
   padding: 1.2rem;
   margin-bottom: 1rem;
-  font-size:1.2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   border: none;
   border-radius: 10px;
@@ -113,17 +99,16 @@ form button:hover {
 .formEntry {
   display: flex;
   flex-direction: column;
-margin: 1rem;
+  margin: 1rem;
 }
 
 .formEntry input {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   box-shadow: none;
   border: none;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 10px;
 }
-
 
 .contactInfo {
   /* border: var(--borderSize) solid purple; */
@@ -142,11 +127,10 @@ margin: 1rem;
   grid-column-start: 2;
   grid-row: 1;
   grid-row-end: 4;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items:center;
-
+  align-items: center;
 }
 
 .resumePage {
@@ -155,33 +139,32 @@ margin: 1rem;
   width: 850px;
   height: 1100px;
   display: flex;
-  flex-direction:column;
-  justify-content: centeflex-start;r;
+  flex-direction: column;
+  justify-content: centeflex-start;
   margin: 2rem 2rem 2rem 0rem;
-
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .resumePage section {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 .resumePage h3 {
-  text-align:center;
-  background-color: #F2F2F2;
+  text-align: center;
+  background-color: #f2f2f2;
   margin: 1rem 3rem;
 }
 
 .userEntry {
-  display:grid;
-grid-template-columns: 1fr 2fr;
-margin: 0 3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 3rem;
 }
 
 .userEntry * {
-  margin:0;
+  margin: 0;
 }
 
 .jobDescription {

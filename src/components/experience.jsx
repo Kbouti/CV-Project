@@ -107,7 +107,11 @@ const Experience = ({
           ></input>
         </div>
 
-        <button type="submit" onClick={submitExperience}>
+        <button
+          className="submitButton"
+          type="submit"
+          onClick={submitExperience}
+        >
           Submit Changes
         </button>
       </form>

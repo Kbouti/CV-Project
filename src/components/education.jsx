@@ -120,7 +120,11 @@ const Education = ({
           ></input>
         </div>
 
-        <button type="submit" onClick={submitEducation}>
+        <button
+          className="submitButton"
+          type="submit"
+          onClick={submitEducation}
+        >
           Submit Changes
         </button>
       </form>

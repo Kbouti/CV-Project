@@ -97,7 +97,7 @@ const ContactInfo = ({
           ></input>
         </div>
 
-        <button type="submit" onClick={submitForm}>
+        <button className="submitButton" type="submit" onClick={submitForm}>
           Submit Changes
         </button>
       </form>
