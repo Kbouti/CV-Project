@@ -22,9 +22,22 @@ const ContactInfo = ({
 
   function toggleForm(){
     console.log(`form toggle triggered`)
+
+
+
+
     const section = document.getElementById("contactInfo");
     const form = section.getElementsByTagName("form")[0];
+    const materialSymbol = section.getElementsByClassName("material-symbols-outlined")
+
+    if (form.classList.contains("hidden")){
+      form.classList.remove("hidden")
+      materialSymbol.innerHTML = "expand-less";
+      return;
+    }
     form.classList.add("hidden");
+    materialSymbol.innerHTML = "expand-more";
+    return;
 
     // Awesome! We hid the element. Now we need to:
     //  -Show the element when it's clicked again
