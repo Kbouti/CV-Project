@@ -2,6 +2,9 @@ import { useState } from "react";
 
 import { examplePerson } from "./exampleData";
 
+
+
+
 const ContactInfo = ({
   fullName,
   fullNameSetter,
@@ -16,6 +19,22 @@ const ContactInfo = ({
   displayExample,
   displayExampleSetter,
 }) => {
+
+  function toggleForm(){
+    console.log(`form toggle triggered`)
+    const section = document.getElementById("contactInfo");
+    const form = section.getElementsByTagName("form")[0];
+    form.classList.add("hidden");
+
+    // Awesome! We hid the element. Now we need to:
+    //  -Show the element when it's clicked again
+    //  -Adjust spacing so the button is in a normal place
+    //  -Change the icon from up arrow to down arrow
+    //  -Set which forms are hidden at the start
+
+  }
+
+
   function submitForm(e) {
     e.preventDefault();
     console.log(`ContactInfo form submitted`);
@@ -103,7 +122,7 @@ const ContactInfo = ({
       </form>
 
 
-    <button className="expandButton">
+    <button onClick={toggleForm} className="expandButton">
     <span className="material-symbols-outlined">expand_less</span>
     </button>
 

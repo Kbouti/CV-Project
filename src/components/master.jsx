@@ -13,6 +13,7 @@ import {
 const education = [exampleEducation];
 const experience = [exampleExperience];
 
+
 const MasterPage = () => {
   const [fullName, setFullName] = useState(examplePerson.fullName);
   const [email, setEmail] = useState(examplePerson.email);
@@ -20,12 +21,14 @@ const MasterPage = () => {
   const [city, setCity] = useState(examplePerson.city);
   const [educationObjects, setEducationObjects] = useState(education);
   const [experienceObjects, setExperienceObjects] = useState(experience);
-
-  // ******************************************************************************************
   const [displayExample, setDisplayExample] = useState(true);
-  // Need something like the above state variable to establish whether or not to include example information on resume output
-  //  The question now is how and where do we use it
-  // ******************************************************************************************
+
+
+// *****************************************************************************************
+// We need to establish a new state variable to keep track of collapsing and expanding the form sections
+
+  
+// *****************************************************************************************
 
   return (
     <>

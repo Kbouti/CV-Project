@@ -188,3 +188,9 @@ form button:hover {
 .jobDescription {
   grid-column-start: 2;
 }
+
+
+
+.hidden {
+  display: none !important;
+}
