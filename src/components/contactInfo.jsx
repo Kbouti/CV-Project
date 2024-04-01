@@ -33,13 +33,6 @@ const ContactInfo = ({
     form.classList.add("hidden");
     materialSymbol.innerHTML = "expand_more";
     return;
-
-    // Awesome! We hid the element. Now we need to:
-    //  -Show the element when it's clicked again
-    //  -Adjust spacing so the button is in a normal place
-    //  -Change the icon from up arrow to down arrow
-    //  -Set which forms are hidden at the start
-
   }
 
 
