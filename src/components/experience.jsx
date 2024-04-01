@@ -32,6 +32,7 @@ const Experience = ({
 
   function submitExperience(e) {
     e.preventDefault();
+
     console.log(`Experience form submitted`);
     console.log(`displayExample: ${displayExample}`);
 
@@ -49,6 +50,11 @@ const Experience = ({
       years: newYears,
       description: newDesctiption,
     };
+
+    const experience = document.getElementById("experience");
+    const form = experience.getElementsByTagName("form")[0];
+    form.reset();
+
     if (displayExample === true) {
       console.log(
         `Captured TRUE displayExample. Setting to false and removing example data`

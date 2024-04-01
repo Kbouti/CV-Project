@@ -2,9 +2,6 @@ import { useState } from "react";
 
 import { examplePerson } from "./exampleData";
 
-
-
-
 const ContactInfo = ({
   fullName,
   fullNameSetter,
@@ -19,14 +16,15 @@ const ContactInfo = ({
   displayExample,
   displayExampleSetter,
 }) => {
-
-  function toggleForm(){
-    console.log(`form toggle triggered`)
+  function toggleForm() {
+    console.log(`form toggle triggered`);
     const section = document.getElementById("contactInfo");
     const form = section.getElementsByTagName("form")[0];
-    const materialSymbol = section.getElementsByClassName("material-symbols-outlined")[0]
-    if (form.classList.contains("hidden")){
-      form.classList.remove("hidden")
+    const materialSymbol = section.getElementsByClassName(
+      "material-symbols-outlined"
+    )[0];
+    if (form.classList.contains("hidden")) {
+      form.classList.remove("hidden");
       materialSymbol.innerHTML = "expand_less";
       return;
     }
@@ -34,7 +32,6 @@ const ContactInfo = ({
     materialSymbol.innerHTML = "expand_more";
     return;
   }
-
 
   function submitForm(e) {
     e.preventDefault();
@@ -50,6 +47,10 @@ const ContactInfo = ({
     const newPhone = phoneInput.value;
     const newEmail = emailInput.value;
     const newCity = cityInput.value;
+
+    const contactInfo = document.getElementById("contactInfo");
+    const form = contactInfo.getElementsByTagName("form")[0];
+    form.reset();
 
     nameInput.value = "";
     phoneInput.value = "";
@@ -122,11 +123,9 @@ const ContactInfo = ({
         </button>
       </form>
 
-
-    <button onClick={toggleForm} className="expandButton">
-    <span className="material-symbols-outlined">expand_less</span>
-    </button>
-
+      <button onClick={toggleForm} className="expandButton">
+        <span className="material-symbols-outlined">expand_less</span>
+      </button>
     </div>
   );
 };

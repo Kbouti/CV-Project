@@ -13,14 +13,15 @@ const Education = ({
   displayExample,
   displayExampleSetter,
 }) => {
-
-  function toggleForm(){
-    console.log(`form toggle triggered`)
+  function toggleForm() {
+    console.log(`form toggle triggered`);
     const section = document.getElementById("education");
     const form = section.getElementsByTagName("form")[0];
-    const materialSymbol = section.getElementsByClassName("material-symbols-outlined")[0]
-    if (form.classList.contains("hidden")){
-      form.classList.remove("hidden")
+    const materialSymbol = section.getElementsByClassName(
+      "material-symbols-outlined"
+    )[0];
+    if (form.classList.contains("hidden")) {
+      form.classList.remove("hidden");
       materialSymbol.innerHTML = "expand_less";
       return;
     }
@@ -44,10 +45,9 @@ const Education = ({
     const newLocation = locationInput.value;
     const newYears = yearsInput.value;
 
-    schoolInput.value = "";
-    degreeInput.value = "";
-    locationInput.value = "";
-    yearsInput.value = "";
+    const education = document.getElementById("education");
+    const form = education.getElementsByTagName("form")[0];
+    form.reset();
 
     if (displayExample === true) {
       console.log(
@@ -146,9 +146,8 @@ const Education = ({
       </form>
 
       <button onClick={toggleForm} className="expandButton">
-      <span className="material-symbols-outlined">expand_more</span>
+        <span className="material-symbols-outlined">expand_more</span>
       </button>
-
     </div>
   );
 };
