@@ -40,6 +40,7 @@ const MasterPage = () => {
         educationObjects={educationObjects}
         experienceObjects={experienceObjects}
       />
+      <div>
       <ContactInfo
         fullName={fullName}
         fullNameSetter={setFullName}
@@ -76,6 +77,7 @@ const MasterPage = () => {
         displayExample={displayExample}
         displayExampleSetter={setDisplayExample}
       />
+      </div>
     </>
   );
 };
