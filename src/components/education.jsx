@@ -13,6 +13,22 @@ const Education = ({
   displayExample,
   displayExampleSetter,
 }) => {
+
+  function toggleForm(){
+    console.log(`form toggle triggered`)
+    const section = document.getElementById("education");
+    const form = section.getElementsByTagName("form")[0];
+    const materialSymbol = section.getElementsByClassName("material-symbols-outlined")[0]
+    if (form.classList.contains("hidden")){
+      form.classList.remove("hidden")
+      materialSymbol.innerHTML = "expand_less";
+      return;
+    }
+    form.classList.add("hidden");
+    materialSymbol.innerHTML = "expand_more";
+    return;
+  }
+
   function submitEducation(e) {
     e.preventDefault();
     console.log(`Education form submitted`);
@@ -80,7 +96,7 @@ const Education = ({
     <div id="education" className="education subSection">
       <h2 className="sectionHeader">Education</h2>
       <div className="educationThumbnails"></div>
-      <form>
+      <form className="hidden">
         <div className="formEntry">
           <label htmlFor="school">School</label>
           <input
@@ -129,8 +145,8 @@ const Education = ({
         </button>
       </form>
 
-      <button className="expandButton">
-      <span className="material-symbols-outlined">expand_less</span>
+      <button onClick={toggleForm} className="expandButton">
+      <span className="material-symbols-outlined">expand_more</span>
       </button>
 
     </div>

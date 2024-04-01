@@ -13,6 +13,24 @@ const Experience = ({
   displayExample,
   displayExampleSetter,
 }) => {
+
+
+  function toggleForm(){
+    console.log(`form toggle triggered`)
+    const section = document.getElementById("experience");
+    const form = section.getElementsByTagName("form")[0];
+    const materialSymbol = section.getElementsByClassName("material-symbols-outlined")[0]
+    if (form.classList.contains("hidden")){
+      form.classList.remove("hidden")
+      materialSymbol.innerHTML = "expand_less";
+      return;
+    }
+    form.classList.add("hidden");
+    materialSymbol.innerHTML = "expand_more";
+    return;
+  }
+
+
   function submitExperience(e) {
     e.preventDefault();
     console.log(`Experience form submitted`);
@@ -56,7 +74,7 @@ const Experience = ({
     <div id="experience" className="experience subSection">
       <h2 className="sectionHeader">Experience</h2>
       <div className="experienceThumbnails"></div>
-      <form>
+      <form className="hidden">
         <div className="formEntry">
           <label htmlFor="organization">Organization</label>
           <input
@@ -116,8 +134,8 @@ const Experience = ({
         </button>
       </form>
 
-      <button className="expandButton">
-        <span className="material-symbols-outlined">expand_less</span>
+      <button onClick={toggleForm} className="expandButton">
+        <span className="material-symbols-outlined">expand_more</span>
       </button>
     </div>
   );
