@@ -13,15 +13,15 @@ const Experience = ({
   displayExample,
   displayExampleSetter,
 }) => {
-
-
-  function toggleForm(){
-    console.log(`form toggle triggered`)
+  function toggleForm() {
+    console.log(`form toggle triggered`);
     const section = document.getElementById("experience");
     const form = section.getElementsByTagName("form")[0];
-    const materialSymbol = section.getElementsByClassName("material-symbols-outlined")[0]
-    if (form.classList.contains("hidden")){
-      form.classList.remove("hidden")
+    const materialSymbol = section.getElementsByClassName(
+      "material-symbols-outlined"
+    )[0];
+    if (form.classList.contains("hidden")) {
+      form.classList.remove("hidden");
       materialSymbol.innerHTML = "expand_less";
       return;
     }
@@ -29,7 +29,6 @@ const Experience = ({
     materialSymbol.innerHTML = "expand_more";
     return;
   }
-
 
   function submitExperience(e) {
     e.preventDefault();
@@ -41,7 +40,15 @@ const Experience = ({
     const newLocation = document.getElementById("workLocationInput").value;
     const newYears = document.getElementById("workYearsInput").value;
     const newDesctiption = document.getElementById("descriptionInput").value;
-
+    const newArray = [];
+    const newEntry = {
+      key: uuidv4(),
+      organization: newOrganization,
+      position: newPosition,
+      location: newLocation,
+      years: newYears,
+      description: newDesctiption,
+    };
     if (displayExample === true) {
       console.log(
         `Captured TRUE displayExample. Setting to false and removing example data`
@@ -51,20 +58,16 @@ const Experience = ({
       emailSetter("");
       phoneSetter("");
       citySetter("");
-
       const blankArray = [];
-      const newArray = [];
-      const newEntry = {
-        key: uuidv4(),
-        organization: newOrganization,
-        position: newPosition,
-        location: newLocation,
-        years: newYears,
-        description: newDesctiption,
-      };
-
-      newArray.push(newEntry);
       educationSetter(blankArray);
+      newArray.push(newEntry);
+      experienceSetter(newArray);
+      return;
+    } else {
+      experienceObjects.map((object) => {
+        newArray.push(object);
+      });
+      newArray.push(newEntry);
       experienceSetter(newArray);
       return;
     }
