@@ -194,3 +194,8 @@ form button:hover {
 .hidden {
   display: none !important;
 }
+
+
+.purple {
+  background-color: purple;
+}
