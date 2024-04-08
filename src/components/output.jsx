@@ -14,13 +14,15 @@ const MainOutput = ({
 // ********************************************************************************************
 // This adds the class purple to every education object except the last one. Alter the purple class in CSS to instead create some kind of underline or barrier between entries
   
-// THIS DOESN'T WORK
-// BUG: 
-// When you submit one of the other forms it adds the purple class to the last entry for some reason?? 
+// This DOES work, but it's being run at the wrong time. This runs on render -> on first render there aren't any elements. On second render there's only one. On third render (either adding another element or changing something elsewhere) there are 2 elements and thus purple is added
+// Almost as if I should be using useState() instead..... 
+
+
 
 const educationEntries = document.getElementsByClassName("educationEntry");
-  for (let i = 0; i < educationEntries.length; i++) {
+  for (let i = 0; i < educationEntries.length -1; i++) {
     if (educationEntries[i] !== undefined) {
+      console.log(`i: ${i} out of ${educationEntries.length}, adding purple`);
       educationEntries[i].classList.add("purple");
     }
   }
