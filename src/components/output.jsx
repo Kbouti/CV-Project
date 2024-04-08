@@ -13,7 +13,12 @@ const MainOutput = ({
 
 // ********************************************************************************************
 // This adds the class purple to every education object except the last one. Alter the purple class in CSS to instead create some kind of underline or barrier between entries
-  const educationEntries = document.getElementsByClassName("educationEntry");
+  
+// THIS DOESN'T WORK
+// BUG: 
+// When you submit one of the other forms it adds the purple class to the last entry for some reason?? 
+
+const educationEntries = document.getElementsByClassName("educationEntry");
   for (let i = 0; i < educationEntries.length; i++) {
     if (educationEntries[i] !== undefined) {
       educationEntries[i].classList.add("purple");
