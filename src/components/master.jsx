@@ -27,7 +27,8 @@ const MasterPage = () => {
 // *****************************************************************************************
 // We need to establish a new state variable to keep track of collapsing and expanding the form sections
 
-  
+// Do we also need a state variable to implement a dividing line between education and experience entries?
+
 // *****************************************************************************************
 
   return (
